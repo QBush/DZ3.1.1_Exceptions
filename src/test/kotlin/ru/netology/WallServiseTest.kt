@@ -80,7 +80,7 @@ class WallServiseTest {
         WallServise.add(post2)
         val result = WallServise.update(
             Post(
-                id = 3, ownerId = 2, fromId = 3, createdBy = 5, date = 25, text = "text", replyOwnerId = 2,
+                id = 2, ownerId = 2, fromId = 3, createdBy = 5, date = 25, text = "text", replyOwnerId = 2,
                 replyPostId = 24, friendsOnly = true, comments = "Comments", copyright = "Copyright",
                 likes = "Likes", reposts = "Reposts", postType = "postType", signerId = 6, canPin = true,
                 canDelete = true, canEdit = true, isPinned = true, markedAsAds = true, isFavorite = true,

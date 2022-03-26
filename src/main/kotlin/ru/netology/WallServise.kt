@@ -44,5 +44,6 @@ object WallServise {
 
     fun clear() {
         posts = emptyArray<Post>()
+        currentID = 0
     }
 }

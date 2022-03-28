@@ -15,10 +15,10 @@ data class Post(
     val likes: Likes?,
     val reposts: Reposts?,
     val postType: String,
-    val postSource: PostSource?, // добавить в тесты
-    val geo : Geo?, // добавить в тесты
+    val postSource: PostSource?,
+    val geo : Geo?,
     val signerId: Int,
-    val copyHistory : CopyHistory?, // добавить в тесты
+    val copyHistory : CopyHistory?,
     val canPin: Boolean,
     val canDelete: Boolean,
     val canEdit: Boolean,

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>WallServise.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">DZ.2.1_OOP</a> &gt; <a href="index.source.html" class="el_package">ru.netology</a> &gt; <span class="el_source">WallServise.kt</span></div><h1>WallServise.kt</h1><pre class="source lang-java linenums">package ru.netology
+
+object WallServise {
+<span class="fc" id="L4">    private var posts = emptyArray&lt;Post&gt;()</span>
+    private var currentID = 0
+
+    fun main() {
+<span class="nc" id="L8">        WallServise.add(Post(ownerId = 2, fromId = 3, createdBy = 5, date = 25, text = &quot;text&quot;, replyOwnerId = 2,</span>
+<span class="nc" id="L9">            replyPostId = 24, friendsOnly = true, comments = null, copyright = null,</span>
+<span class="nc" id="L10">            likes = null, reposts = null, postType = &quot;postType&quot;, signerId = 6, canPin = true,</span>
+<span class="nc" id="L11">            canDelete = true, canEdit = true, isPinned = true, markedAsAds = true, isFavorite = true,</span>
+<span class="nc" id="L12">            donut = null, postponedId = &quot;postponedId&quot;, postSource = null, geo = null, copyHistory = null))</span>
+
+<span class="nc" id="L14">        WallServise.add(Post(ownerId = 2, fromId = 3, createdBy = 5, date = 25, text = &quot;text&quot;, replyOwnerId = 2,</span>
+<span class="nc" id="L15">            replyPostId = 24, friendsOnly = true, comments = null, copyright = null,</span>
+<span class="nc" id="L16">            likes = null, reposts = null, postType = &quot;postType&quot;, signerId = 6, canPin = true,</span>
+<span class="nc" id="L17">            canDelete = true, canEdit = true, isPinned = true, markedAsAds = true, isFavorite = true,</span>
+<span class="nc" id="L18">            donut = null, postponedId = &quot;postponedId&quot;, postSource = null, geo = null, copyHistory = null))</span>
+
+<span class="nc" id="L20">        WallServise.add(Post(ownerId = 2, fromId = 3, createdBy = 5, date = 25, text = &quot;text&quot;, replyOwnerId = 2,</span>
+<span class="nc" id="L21">            replyPostId = 24, friendsOnly = true, comments = null, copyright = null,</span>
+<span class="nc" id="L22">            likes = null, reposts = null, postType = &quot;postType&quot;, signerId = 6, canPin = true,</span>
+<span class="nc" id="L23">            canDelete = true, canEdit = true, isPinned = true, markedAsAds = true, isFavorite = true,</span>
+<span class="nc" id="L24">            donut = null, postponedId = &quot;postponedId&quot;, postSource = null, geo = null, copyHistory = null))</span>
+<span class="nc" id="L25">    }</span>
+
+    fun add(post: Post): Post {
+<span class="fc" id="L28">        currentID++</span>
+<span class="fc" id="L29">        val post = post.copy(id = currentID)</span>
+<span class="fc" id="L30">        posts += post</span>
+<span class="fc" id="L31">        return posts.last()</span>
+    }
+
+
+    fun update(currentPost: Post): Boolean {
+<span class="fc bfc" id="L36" title="All 2 branches covered.">        for (post in posts) {</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">            if (post.id == currentPost.id) {</span>
+<span class="fc" id="L38">                post.copy(</span>
+<span class="fc" id="L39">                    fromId = currentPost.fromId,</span>
+<span class="fc" id="L40">                    createdBy = currentPost.createdBy,</span>
+<span class="fc" id="L41">                    text = currentPost.text,</span>
+<span class="fc" id="L42">                    replyOwnerId = currentPost.replyOwnerId,</span>
+<span class="fc" id="L43">                    replyPostId = currentPost.replyPostId,</span>
+<span class="fc" id="L44">                    friendsOnly = currentPost.friendsOnly,</span>
+<span class="fc" id="L45">                    comments = currentPost.comments,</span>
+<span class="fc" id="L46">                    copyright = currentPost.copyright,</span>
+<span class="fc" id="L47">                    likes = currentPost.likes,</span>
+<span class="fc" id="L48">                    reposts = currentPost.reposts,</span>
+<span class="fc" id="L49">                    postType = currentPost.postType,</span>
+<span class="fc" id="L50">                    signerId = currentPost.signerId,</span>
+<span class="fc" id="L51">                    canPin = currentPost.canPin,</span>
+<span class="fc" id="L52">                    canDelete = currentPost.canDelete,</span>
+<span class="fc" id="L53">                    canEdit = currentPost.canEdit,</span>
+<span class="fc" id="L54">                    isPinned = currentPost.isPinned,</span>
+<span class="fc" id="L55">                    markedAsAds = currentPost.markedAsAds,</span>
+<span class="fc" id="L56">                    isFavorite = currentPost.isFavorite,</span>
+<span class="fc" id="L57">                    donut = currentPost.donut,</span>
+<span class="fc" id="L58">                    postponedId = currentPost.postponedId</span>
+                )
+<span class="fc" id="L60">                return true</span>
+            }
+        }
+<span class="fc" id="L63">        return false</span>
+    }
+
+    fun clear() {
+<span class="fc" id="L67">        posts = emptyArray&lt;Post&gt;()</span>
+<span class="fc" id="L68">        currentID = 0</span>
+<span class="fc" id="L69">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

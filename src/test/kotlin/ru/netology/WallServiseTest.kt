@@ -11,10 +11,10 @@ class WallServiseTest {
         WallServise.clear()
         var post = Post(
             ownerId = 2, fromId = 3, createdBy = 5, date = 25, text = "text", replyOwnerId = 2,
-            replyPostId = 24, friendsOnly = true, comments = "Comments", copyright = "Copyright",
-            likes = "Likes", reposts = "Reposts", postType = "postType", signerId = 6, canPin = true,
+            replyPostId = 24, friendsOnly = true, comments = null, copyright = null,
+            likes = null, reposts = null, postType = "postType", signerId = 6, canPin = true,
             canDelete = true, canEdit = true, isPinned = true, markedAsAds = true, isFavorite = true,
-            donut = "Donut", postponedId = "postponedId"
+            donut = null, postponedId = "postponedId", postSource = null, geo = null, copyHistory = null
         )
 
         val result = WallServise.add(post)
@@ -27,17 +27,17 @@ class WallServiseTest {
         WallServise.clear()
         var post1 = Post(
             ownerId = 2, fromId = 3, createdBy = 5, date = 25, text = "text", replyOwnerId = 2,
-            replyPostId = 24, friendsOnly = true, comments = "Comments", copyright = "Copyright",
-            likes = "Likes", reposts = "Reposts", postType = "postType", signerId = 6, canPin = true,
+            replyPostId = 24, friendsOnly = true, comments = null, copyright = null,
+            likes = null, reposts = null, postType = "postType", signerId = 6, canPin = true,
             canDelete = true, canEdit = true, isPinned = true, markedAsAds = true, isFavorite = true,
-            donut = "Donut", postponedId = "postponedId"
+            donut = null, postponedId = "postponedId", postSource = null, geo = null, copyHistory = null
         )
         var post2 = Post(
             ownerId = 2, fromId = 3, createdBy = 5, date = 25, text = "text", replyOwnerId = 2,
-            replyPostId = 24, friendsOnly = true, comments = "Comments", copyright = "Copyright",
-            likes = "Likes", reposts = "Reposts", postType = "postType", signerId = 6, canPin = true,
+            replyPostId = 24, friendsOnly = true, comments = null, copyright = null,
+            likes = null, reposts = null, postType = "postType", signerId = 6, canPin = true,
             canDelete = true, canEdit = true, isPinned = true, markedAsAds = true, isFavorite = true,
-            donut = "Donut", postponedId = "postponedId"
+            donut = null, postponedId = "postponedId", postSource = null, geo = null, copyHistory = null
         )
 
         WallServise.add(post1)
@@ -47,10 +47,10 @@ class WallServiseTest {
             Post(
                 id = 2,
                 ownerId = 2, fromId = 3, createdBy = 5, date = 25, text = "text", replyOwnerId = 2,
-                replyPostId = 24, friendsOnly = true, comments = "Comments", copyright = "Copyright",
-                likes = "Likes", reposts = "Reposts", postType = "postType", signerId = 6, canPin = true,
+                replyPostId = 24, friendsOnly = true, comments = null, copyright = null,
+                likes = null, reposts = null, postType = "postType", signerId = 6, canPin = true,
                 canDelete = true, canEdit = true, isPinned = true, markedAsAds = true, isFavorite = true,
-                donut = "Donut", postponedId = "postponedId"
+                donut = null, postponedId = "postponedId", postSource = null, geo = null, copyHistory = null
             )
         )
 
@@ -63,17 +63,17 @@ class WallServiseTest {
         WallServise.clear()
         var post1 = Post(
             ownerId = 2, fromId = 3, createdBy = 5, date = 25, text = "text", replyOwnerId = 2,
-            replyPostId = 24, friendsOnly = true, comments = "Comments", copyright = "Copyright",
-            likes = "Likes", reposts = "Reposts", postType = "postType", signerId = 6, canPin = true,
+            replyPostId = 24, friendsOnly = true, comments = null, copyright = null,
+            likes = null, reposts = null, postType = "postType", signerId = 6, canPin = true,
             canDelete = true, canEdit = true, isPinned = true, markedAsAds = true, isFavorite = true,
-            donut = "Donut", postponedId = "postponedId"
+            donut = null, postponedId = "postponedId", postSource = null, geo = null, copyHistory = null
         )
         var post2 = Post(
             ownerId = 2, fromId = 3, createdBy = 5, date = 25, text = "text", replyOwnerId = 2,
-            replyPostId = 24, friendsOnly = true, comments = "Comments", copyright = "Copyright",
-            likes = "Likes", reposts = "Reposts", postType = "postType", signerId = 6, canPin = true,
+            replyPostId = 24, friendsOnly = true, comments = null, copyright = null,
+            likes = null, reposts = null, postType = "postType", signerId = 6, canPin = true,
             canDelete = true, canEdit = true, isPinned = true, markedAsAds = true, isFavorite = true,
-            donut = "Donut", postponedId = "postponedId"
+            donut = null, postponedId = "postponedId", postSource = null, geo = null, copyHistory = null
         )
 
         WallServise.add(post1)
@@ -81,10 +81,10 @@ class WallServiseTest {
         val result = WallServise.update(
             Post(
                 id = 3, ownerId = 2, fromId = 3, createdBy = 5, date = 25, text = "text", replyOwnerId = 2,
-                replyPostId = 24, friendsOnly = true, comments = "Comments", copyright = "Copyright",
-                likes = "Likes", reposts = "Reposts", postType = "postType", signerId = 6, canPin = true,
+                replyPostId = 24, friendsOnly = true, comments = null, copyright = null,
+                likes = null, reposts = null, postType = "postType", signerId = 6, canPin = true,
                 canDelete = true, canEdit = true, isPinned = true, markedAsAds = true, isFavorite = true,
-                donut = "Donut", postponedId = "postponedId"
+                donut = null, postponedId = "postponedId", postSource = null, geo = null, copyHistory = null
             )
         )
 

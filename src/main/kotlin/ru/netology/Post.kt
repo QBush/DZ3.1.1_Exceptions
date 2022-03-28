@@ -1,5 +1,7 @@
 package ru.netology
 
+import ru.netology.attachment.Attachments
+
 data class Post(
     val id: Int = 0,
     val ownerId: Int,
@@ -17,6 +19,7 @@ data class Post(
     val postType: String,
     val postSource: PostSource?,
     val geo : Geo?,
+    val attachment : Attachments?,
     val signerId: Int,
     val copyHistory : CopyHistory?,
     val canPin: Boolean,

@@ -1,71 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>WallServise.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">DZ.2.1_OOP</a> &gt; <a href="index.source.html" class="el_package">ru.netology</a> &gt; <span class="el_source">WallServise.kt</span></div><h1>WallServise.kt</h1><pre class="source lang-java linenums">package ru.netology
 
+import ru.netology.attachment.*
+
 object WallServise {
-<span class="fc" id="L4">    private var posts = emptyArray&lt;Post&gt;()</span>
+<span class="nc" id="L6">    private var posts = emptyArray&lt;Post&gt;()</span>
     private var currentID = 0
 
     fun main() {
-<span class="nc" id="L8">        WallServise.add(Post(ownerId = 2, fromId = 3, createdBy = 5, date = 25, text = &quot;text&quot;, replyOwnerId = 2,</span>
-<span class="nc" id="L9">            replyPostId = 24, friendsOnly = true, comments = null, copyright = null,</span>
-<span class="nc" id="L10">            likes = null, reposts = null, postType = &quot;postType&quot;, signerId = 6, canPin = true,</span>
-<span class="nc" id="L11">            canDelete = true, canEdit = true, isPinned = true, markedAsAds = true, isFavorite = true,</span>
-<span class="nc" id="L12">            donut = null, postponedId = &quot;postponedId&quot;, postSource = null, geo = null, copyHistory = null))</span>
+<span class="nc" id="L10">        WallServise.add(</span>
+<span class="nc" id="L11">            Post(</span>
+<span class="nc" id="L12">                ownerId = 2, fromId = 3, createdBy = 5, date = 25, text = &quot;text&quot;, replyOwnerId = 2,</span>
+<span class="nc" id="L13">                replyPostId = 24, friendsOnly = true, comments = null, copyright = null,</span>
+<span class="nc" id="L14">                likes = null, reposts = null, postType = &quot;postType&quot;, signerId = 6, canPin = true,</span>
+<span class="nc" id="L15">                canDelete = true, canEdit = true, isPinned = true, markedAsAds = true, isFavorite = true,</span>
+<span class="nc" id="L16">                donut = null, postponedId = &quot;postponedId&quot;, postSource = null, geo = null, copyHistory = null,</span>
+<span class="nc" id="L17">                attachment = null</span>
+            )
+        )
 
-<span class="nc" id="L14">        WallServise.add(Post(ownerId = 2, fromId = 3, createdBy = 5, date = 25, text = &quot;text&quot;, replyOwnerId = 2,</span>
-<span class="nc" id="L15">            replyPostId = 24, friendsOnly = true, comments = null, copyright = null,</span>
-<span class="nc" id="L16">            likes = null, reposts = null, postType = &quot;postType&quot;, signerId = 6, canPin = true,</span>
-<span class="nc" id="L17">            canDelete = true, canEdit = true, isPinned = true, markedAsAds = true, isFavorite = true,</span>
-<span class="nc" id="L18">            donut = null, postponedId = &quot;postponedId&quot;, postSource = null, geo = null, copyHistory = null))</span>
+<span class="nc" id="L21">        WallServise.add(</span>
+<span class="nc" id="L22">            Post(</span>
+<span class="nc" id="L23">                ownerId = 2, fromId = 3, createdBy = 5, date = 25, text = &quot;text&quot;, replyOwnerId = 2,</span>
+<span class="nc" id="L24">                replyPostId = 24, friendsOnly = true, comments = null, copyright = null,</span>
+<span class="nc" id="L25">                likes = null, reposts = null, postType = &quot;postType&quot;, signerId = 6, canPin = true,</span>
+<span class="nc" id="L26">                canDelete = true, canEdit = true, isPinned = true, markedAsAds = true, isFavorite = true,</span>
+<span class="nc" id="L27">                donut = null, postponedId = &quot;postponedId&quot;, postSource = null, geo = null, copyHistory = null,</span>
+<span class="nc" id="L28">                attachment = null</span>
+            )
+        )
 
-<span class="nc" id="L20">        WallServise.add(Post(ownerId = 2, fromId = 3, createdBy = 5, date = 25, text = &quot;text&quot;, replyOwnerId = 2,</span>
-<span class="nc" id="L21">            replyPostId = 24, friendsOnly = true, comments = null, copyright = null,</span>
-<span class="nc" id="L22">            likes = null, reposts = null, postType = &quot;postType&quot;, signerId = 6, canPin = true,</span>
-<span class="nc" id="L23">            canDelete = true, canEdit = true, isPinned = true, markedAsAds = true, isFavorite = true,</span>
-<span class="nc" id="L24">            donut = null, postponedId = &quot;postponedId&quot;, postSource = null, geo = null, copyHistory = null))</span>
-<span class="nc" id="L25">    }</span>
+<span class="nc" id="L32">        WallServise.add(</span>
+<span class="nc" id="L33">            Post(</span>
+<span class="nc" id="L34">                ownerId = 2, fromId = 3, createdBy = 5, date = 25, text = &quot;text&quot;, replyOwnerId = 2,</span>
+<span class="nc" id="L35">                replyPostId = 24, friendsOnly = true, comments = null, copyright = null,</span>
+<span class="nc" id="L36">                likes = null, reposts = null, postType = &quot;postType&quot;, signerId = 6, canPin = true,</span>
+<span class="nc" id="L37">                canDelete = true, canEdit = true, isPinned = true, markedAsAds = true, isFavorite = true,</span>
+<span class="nc" id="L38">                donut = null, postponedId = &quot;postponedId&quot;, postSource = null, geo = null, copyHistory = null,</span>
+<span class="nc" id="L39">                attachment = null</span>
+            )
+        )
+
+<span class="nc" id="L43">        val video1: VideoAttachment? = null</span>
+<span class="nc" id="L44">        val audio1: AudioAttachment? = null</span>
+<span class="nc" id="L45">        val link1: LinkAttachment? = null</span>
+<span class="nc" id="L46">        val note1: NoteAttachment? = null</span>
+<span class="nc" id="L47">        val photo1: PhotoAttachment? = null</span>
+
+<span class="nc" id="L49">        val attachment1: Array&lt;Attachments&gt; = arrayOf (</span>
+<span class="nc" id="L50">            Video(&quot;video&quot;, video1),</span>
+<span class="nc" id="L51">            Audio(&quot;audio&quot;,audio1),</span>
+<span class="nc" id="L52">            Link(&quot;link&quot;,link1),</span>
+<span class="nc" id="L53">            Note(&quot;note&quot;,note1),</span>
+<span class="nc" id="L54">            Photo(&quot;photo&quot;, photo1)</span>
+        )
+<span class="nc" id="L56">        println(attachment1)</span>
+
+<span class="nc" id="L58">    }</span>
 
     fun add(post: Post): Post {
-<span class="fc" id="L28">        currentID++</span>
-<span class="fc" id="L29">        val post = post.copy(id = currentID)</span>
-<span class="fc" id="L30">        posts += post</span>
-<span class="fc" id="L31">        return posts.last()</span>
+<span class="nc" id="L61">        currentID++</span>
+<span class="nc" id="L62">        val post1 = post.copy(id = currentID)</span>
+<span class="nc" id="L63">        posts += post1</span>
+<span class="nc" id="L64">        return posts.last()</span>
     }
 
 
     fun update(currentPost: Post): Boolean {
-<span class="fc bfc" id="L36" title="All 2 branches covered.">        for (post in posts) {</span>
-<span class="fc bfc" id="L37" title="All 2 branches covered.">            if (post.id == currentPost.id) {</span>
-<span class="fc" id="L38">                post.copy(</span>
-<span class="fc" id="L39">                    fromId = currentPost.fromId,</span>
-<span class="fc" id="L40">                    createdBy = currentPost.createdBy,</span>
-<span class="fc" id="L41">                    text = currentPost.text,</span>
-<span class="fc" id="L42">                    replyOwnerId = currentPost.replyOwnerId,</span>
-<span class="fc" id="L43">                    replyPostId = currentPost.replyPostId,</span>
-<span class="fc" id="L44">                    friendsOnly = currentPost.friendsOnly,</span>
-<span class="fc" id="L45">                    comments = currentPost.comments,</span>
-<span class="fc" id="L46">                    copyright = currentPost.copyright,</span>
-<span class="fc" id="L47">                    likes = currentPost.likes,</span>
-<span class="fc" id="L48">                    reposts = currentPost.reposts,</span>
-<span class="fc" id="L49">                    postType = currentPost.postType,</span>
-<span class="fc" id="L50">                    signerId = currentPost.signerId,</span>
-<span class="fc" id="L51">                    canPin = currentPost.canPin,</span>
-<span class="fc" id="L52">                    canDelete = currentPost.canDelete,</span>
-<span class="fc" id="L53">                    canEdit = currentPost.canEdit,</span>
-<span class="fc" id="L54">                    isPinned = currentPost.isPinned,</span>
-<span class="fc" id="L55">                    markedAsAds = currentPost.markedAsAds,</span>
-<span class="fc" id="L56">                    isFavorite = currentPost.isFavorite,</span>
-<span class="fc" id="L57">                    donut = currentPost.donut,</span>
-<span class="fc" id="L58">                    postponedId = currentPost.postponedId</span>
+<span class="nc bnc" id="L69" title="All 2 branches missed.">        for (post in posts) {</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">            if (post.id == currentPost.id) {</span>
+<span class="nc" id="L71">                post.copy(</span>
+<span class="nc" id="L72">                    fromId = currentPost.fromId,</span>
+<span class="nc" id="L73">                    createdBy = currentPost.createdBy,</span>
+<span class="nc" id="L74">                    text = currentPost.text,</span>
+<span class="nc" id="L75">                    replyOwnerId = currentPost.replyOwnerId,</span>
+<span class="nc" id="L76">                    replyPostId = currentPost.replyPostId,</span>
+<span class="nc" id="L77">                    friendsOnly = currentPost.friendsOnly,</span>
+<span class="nc" id="L78">                    comments = currentPost.comments,</span>
+<span class="nc" id="L79">                    copyright = currentPost.copyright,</span>
+<span class="nc" id="L80">                    likes = currentPost.likes,</span>
+<span class="nc" id="L81">                    reposts = currentPost.reposts,</span>
+<span class="nc" id="L82">                    postType = currentPost.postType,</span>
+<span class="nc" id="L83">                    signerId = currentPost.signerId,</span>
+<span class="nc" id="L84">                    canPin = currentPost.canPin,</span>
+<span class="nc" id="L85">                    canDelete = currentPost.canDelete,</span>
+<span class="nc" id="L86">                    canEdit = currentPost.canEdit,</span>
+<span class="nc" id="L87">                    isPinned = currentPost.isPinned,</span>
+<span class="nc" id="L88">                    markedAsAds = currentPost.markedAsAds,</span>
+<span class="nc" id="L89">                    isFavorite = currentPost.isFavorite,</span>
+<span class="nc" id="L90">                    donut = currentPost.donut,</span>
+<span class="nc" id="L91">                    postponedId = currentPost.postponedId</span>
                 )
-<span class="fc" id="L60">                return true</span>
+<span class="nc" id="L93">                return true</span>
             }
         }
-<span class="fc" id="L63">        return false</span>
+<span class="nc" id="L96">        return false</span>
     }
 
     fun clear() {
-<span class="fc" id="L67">        posts = emptyArray&lt;Post&gt;()</span>
-<span class="fc" id="L68">        currentID = 0</span>
-<span class="fc" id="L69">    }</span>
+<span class="nc" id="L100">        posts = emptyArray&lt;Post&gt;()</span>
+<span class="nc" id="L101">        currentID = 0</span>
+<span class="nc" id="L102">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

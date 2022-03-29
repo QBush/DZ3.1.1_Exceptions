@@ -11,11 +11,11 @@ fun main() {
     val photo1: PhotoAttachment? = null
 
     val attachment1: Array<Attachments> = arrayOf(
-        Video("video", video1),
-        Audio("audio", audio1),
-        Link("link", link1),
-        Note("note", note1),
-        Photo("photo", photo1)
+        VideoAttachment("video", video1),
+        AudioAttachment("audio", audio1),
+        LinkAttachment("link", link1),
+        NoteAttachment("note", note1),
+        PhotoAttachment("photo", photo1)
     )
 
     WallServise.add(

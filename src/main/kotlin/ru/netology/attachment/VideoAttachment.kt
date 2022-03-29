@@ -1,4 +1,4 @@
 package ru.netology.attachment
 
-class VideoAttachment {
+class VideoAttachment(type: String = "video", val video: VideoAttachment?) : Attachments(type) {
 }

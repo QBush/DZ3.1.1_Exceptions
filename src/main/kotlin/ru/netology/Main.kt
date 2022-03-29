@@ -4,11 +4,11 @@ import ru.netology.attachment.*
 
 fun main() {
 
-    val video1: VideoAttachment? = null
-    val audio1: AudioAttachment? = null
-    val link1: LinkAttachment? = null
-    val note1: NoteAttachment? = null
-    val photo1: PhotoAttachment? = null
+    val video1: Video? = null
+    val audio1: Audio? = null
+    val link1: Link? = null
+    val note1: Note? = null
+    val photo1: Photo? = null
 
     val attachment1: Array<Attachments> = arrayOf(
         VideoAttachment("video", video1),
@@ -17,6 +17,7 @@ fun main() {
         NoteAttachment("note", note1),
         PhotoAttachment("photo", photo1)
     )
+
 
     WallServise.add(
         Post(

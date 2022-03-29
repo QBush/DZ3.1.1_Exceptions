@@ -1,4 +1,4 @@
 package ru.netology.attachment
 
-class PhotoAttachment(type: String = "photo", val photo: Photo?) : Attachments(type) {
+class PhotoAttachment(val photo: Photo?) : Attachments("photo") {
 }

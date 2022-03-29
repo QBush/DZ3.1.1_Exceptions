@@ -1,4 +1,4 @@
 package ru.netology.attachment
 
-class NoteAttachment(type: String = "note", val note: Note?) : Attachments(type) {
+class NoteAttachment(val note: Note?) : Attachments("note") {
 }

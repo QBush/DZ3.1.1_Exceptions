@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.netology.WallServiseTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-03-28T10:50:45" hostname="ADMIN-DNS" time="0.182">
+<testsuite name="ru.netology.WallServiseTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-03-29T00:47:02" hostname="ADMIN-DNS" time="0.186">
   <properties/>
-  <testcase name="addTest" classname="ru.netology.WallServiseTest" time="0.182"/>
+  <testcase name="addTest" classname="ru.netology.WallServiseTest" time="0.186"/>
   <testcase name="updateTestTrue" classname="ru.netology.WallServiseTest" time="0.0"/>
   <testcase name="updateTestFalse" classname="ru.netology.WallServiseTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

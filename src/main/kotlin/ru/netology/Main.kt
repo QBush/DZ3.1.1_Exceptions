@@ -11,11 +11,11 @@ fun main() {
     val photo1: Photo? = null
 
     val attachment1: Array<Attachments> = arrayOf(
-        VideoAttachment("video", video1),
-        AudioAttachment("audio", audio1),
-        LinkAttachment("link", link1),
-        NoteAttachment("note", note1),
-        PhotoAttachment("photo", photo1)
+        VideoAttachment(video = video1),
+        AudioAttachment(audio =  audio1),
+        LinkAttachment(link = link1),
+        NoteAttachment(note = note1),
+        PhotoAttachment(photo = photo1)
     )
 
 

@@ -5,8 +5,8 @@ import ru.netology.attachment.*
 
 object WallServise {
     private var posts = emptyArray<Post>()
+    private var comments = emptyArray<Comment>()
     private var currentID = 0
-
 
 
     fun add(post: Post): Post {
@@ -16,6 +16,16 @@ object WallServise {
         return posts.last()
     }
 
+
+    fun createComment(comment: Comment, postId: Int): Boolean {
+        for (post in posts) {
+            if (post.id == postId) {
+                comments += comment
+                return true
+            }
+        }
+        throw PostNotFoundException()
+    }
 
     fun update(currentPost: Post): Boolean {
         for (post in posts) {
@@ -49,7 +59,7 @@ object WallServise {
     }
 
     fun clear() {
-        posts = emptyArray<Post>()
+        posts = emptyArray()
         currentID = 0
     }
 }

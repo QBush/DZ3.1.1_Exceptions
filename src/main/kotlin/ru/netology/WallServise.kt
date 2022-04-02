@@ -6,6 +6,7 @@ import ru.netology.attachment.*
 object WallServise {
     private var posts = emptyArray<Post>()
     private var comments = emptyArray<Comment>()
+    private var commentsReports = emptyArray<Report>()
     private var currentID = 0
 
 
@@ -16,15 +17,31 @@ object WallServise {
         return posts.last()
     }
 
-
-    fun createComment(comment: Comment, postId: Int): Boolean {
+    fun findpostById(postId: Int): Post? {
         for (post in posts) {
             if (post.id == postId) {
-                comments += comment
+                return post
+            }
+        }
+        return null
+    }
+
+    fun createComment(comment: Comment, postId: Int): Boolean {
+        if (findpostById(postId) != null) {
+            comments += comment
+            return true
+        }
+        throw PostNotFoundException()
+    }
+
+    fun reportComment(commentId: Int, reason: Int): Boolean {
+        for (comment in comments) {
+            if (comment.id == commentId) {
+                commentsReports += Report(commentId, reason)
                 return true
             }
         }
-        throw PostNotFoundException()
+        throw CommentNotFoundException()
     }
 
     fun update(currentPost: Post): Boolean {

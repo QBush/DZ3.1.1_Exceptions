@@ -18,6 +18,7 @@ fun main() {
         PhotoAttachment(photo = photo1)
     )
 
+
     WallServise.add(
         Post(
             ownerId = 2, fromId = 3, createdBy = 5, date = 25, text = "text", replyOwnerId = 2,

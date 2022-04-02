@@ -73,7 +73,7 @@ class WallServiseTest {
     fun createCommentTest() {
         WallServise.clear()
         WallServise.add(post1)
-        var result = WallServise.createComment(Comment(), 1)
+        var result = WallServise.createComment(Comment(1), 1)
         assertTrue(result)
     }
 
@@ -81,7 +81,38 @@ class WallServiseTest {
     fun createCommentWithExceptionTest() {
         WallServise.clear()
         WallServise.add(post1)
-        WallServise.createComment(Comment(), 2)
+        WallServise.createComment(Comment(1), 2)
 
+    }
+
+    @Test
+    fun reportCommentTest() {
+        WallServise.clear()
+        WallServise.add(post1)
+        WallServise.add(post2)
+        WallServise.createComment(Comment(1), 1)
+        WallServise.createComment(Comment(2), 2)
+        var result = WallServise.reportComment(1,6)
+        assertTrue(result)
+    }
+
+    @Test(expected = CommentNotFoundException::class)
+    fun reportCommentThereIsNoCommentTest() {
+        WallServise.clear()
+        WallServise.add(post1)
+        WallServise.add(post2)
+        WallServise.createComment(Comment(1), 1)
+        WallServise.createComment(Comment(2), 2)
+        WallServise.reportComment(3,6)
+    }
+
+    @Test(expected = ReportsReasonNumberException::class)
+    fun reportCommentThereIsNoReasonTest() {
+        WallServise.clear()
+        WallServise.add(post1)
+        WallServise.add(post2)
+        WallServise.createComment(Comment(1), 1)
+        WallServise.createComment(Comment(2), 2)
+        WallServise.reportComment(1,9)
     }
 }

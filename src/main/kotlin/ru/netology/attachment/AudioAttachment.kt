@@ -1,4 +1,4 @@
 package ru.netology.attachment
 
-data class AudioAttachment(override val type: String = "audio", val audio: Audio?) : Attachments(type) {
+data class AudioAttachment(val audio: Audio?) : Attachments("audio") {
 }
